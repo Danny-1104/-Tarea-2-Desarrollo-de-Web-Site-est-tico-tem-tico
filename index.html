@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona Gamer - Apoyo a Streamers</title>
+
+<style>
+/* ======== ESTILO GENERAL ========
+======== Tarea 2 ========
+*/
+body{
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url("imagenes/fondo.png") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+}
+
+/* Neon Colors */
+:root{
+    --neon-red: #ff003c;
+    --neon-blue: #00e5ff;
+}
+
+/* ======== BARRA DE NAVEGACIÓN ======== */
+.nav-cyber{
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: rgba(5,5,15,0.85);
+    backdrop-filter: blur(5px);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    border-bottom: 2px solid var(--neon-blue);
+    z-index: 1000;
+}
+.nav-cyber a{
+    color: var(--neon-blue);
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.nav-cyber a:hover{
+    text-shadow: 0 0 12px var(--neon-red);
+}
+
+/* ======== ENCABEZADO ======== */
+header{
+    margin-top: 90px;
+    text-align: center;
+    padding: 70px 20px;
+    background: rgba(0,0,0,0.65);
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 0 0 15px #000;
+    border-bottom: 3px solid #000;
+}
+
+/* ======== SECCIONES ======== */
+section{
+    padding: 65px 10%;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    background: rgba(0,0,0,0.60);
+    backdrop-filter: blur(4px);
+}
+section p{
+    text-align: justify;
+}
+
+/* ======== TÍTULOS NEÓN PARPADEANTE ======== */
+h2{
+    font-size: 34px;
+    margin-bottom: 20px;
+    color: var(--neon-blue);
+    animation: neonPulse 2s infinite alternate;
+}
+@keyframes neonPulse{
+    from { text-shadow: 0 0 6px var(--neon-blue); }
+    to   { text-shadow: 0 0 18px var(--neon-red); }
+}
+
+/* ======== TARJETAS ======== */
+.destacados-grid{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    background: rgba(255,255,255,0.07);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    width: 250px;
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+    transition: 0.3s;
+}
+.card:hover{
+    transform: scale(1.07);
+    box-shadow: 0 0 25px var(--neon-red);
+}
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ======== LOGO CON RELIEVE ======== */
+.logo-relieve{
+    width: 300px;
+    filter: drop-shadow(0px 0px 18px var(--neon-blue));
+    border-radius: 14px;
+}
+
+/* ======== LISTAS ======== */
+.beneficios, .colab-lista{
+    background: rgba(255,255,255,0.07);
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--neon-blue);
+    box-shadow: 0 0 12px rgba(0,229,255,0.6);
+}
+
+/* ======== MEDIOS ======== */
+.media-container{
+    text-align:center;
+}
+.media-container iframe, .media-container img{
+    max-width: 100%;
+    border:2px solid var(--neon-blue);
+    border-radius: 8px;
+    box-shadow: 0 0 18px var(--neon-red);
+}
+
+/* ======== BOTÓN VOLVER ARRIBA ======== */
+#topBtn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--neon-blue);
+    color: #000;
+    padding: 12px 16px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 0 18px var(--neon-blue);
+    cursor: pointer;
+    transition: 0.3s;
+    display:none;
+}
+#topBtn:hover{
+    box-shadow: 0 0 30px var(--neon-red);
+}
+
+/* ======== PIE ======== */
+footer{
+    text-align: center;
+    padding: 25px;
+    color: var(--neon-blue);
+    background: rgba(0,0,0,0.85);
+}
+</style>
+</head>
+<body>
+
+<button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+
+<nav class="nav-cyber">
+    <a href="#intro">Inicio</a>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#destacados">Destacados</a>
+    <a href="#consejos">Consejos</a>
+    <a href="#video">Video</a>
+    <a href="#grafico">Gráfico</a>
+    <a href="#comunidad">Comunidad</a>
+    <a href="#colab">Colaboración</a>
+</nav>
+
+<header>
+    Comunidad Gamer & Streamers Emergentes
+</header>
+
+<section id="intro">
+    <h2>Bienvenido a la Zona Gamer</h2>
+    <p>
+        Esta comunidad fue creada con el objetivo de apoyar a streamers y creadores de contenido que están comenzando en plataformas como YouTube, Facebook Gaming, Kick y Twitch. Aquí podrás encontrar compañeros con los cuales compartir experiencias, consejos y colaboraciones que te ayudarán a crecer y mejorar tu presencia online. También ofrecemos orientación sobre branding personal, interacción con la audiencia, herramientas de transmisión y optimización de canales.
+    </p>
+</section>
+
+<section id="beneficios">
+    <h2>¿Qué Ganarás al Unirte?</h2>
+    <ul class="beneficios">
+        <li>Apoyo real entre streamers, creando una comunidad de crecimiento mutuo.</li>
+        <li>Promoción en redes sociales y grupos especializados en gaming.</li>
+        <li>Mejoras en la calidad visual y auditiva de tus transmisiones.</li>
+        <li>Participación en eventos, torneos, entrevistas y colaboraciones grupales.</li>
+    </ul>
+</section>
+
+<section id="destacados">
+    <h2>Streamers & Juegos Recomendados</h2>
+
+    <ul class="beneficios">
+        <li>Valorant - Competitivo moderno con jugabilidad táctica.</li>
+        <li>Fortnite - Creatividad, construcción y gran comunidad activa.</li>
+        <li>Minecraft - Mundo abierto para construir, explorar y crear contenido.</li>
+        <li>GTA V Roleplay - Historias improvisadas y entretenimiento constante.</li>
+    </ul>
+
+    <div class="destacados-grid">
+        <div class="card">
+            <a href="https://www.youtube.com/channel/UCaY_-ksFSQtTGk0y1HA_3YQ" target="_blank">
+            <img src="imagenes/ibai.png">
+            </a>
+            <strong>@Ibai</strong>
+        </div>
+        <div class="card">
+            <a href="https://www.youtube.com/user/AuronPlay" target="_blank">
+            <img src="imagenes/auron.png">
+            </a>
+            <strong>@Auronplay</strong>
+        </div>
+        <div class="card">
+            <a href="https://www.youtube.com/channel/UCCEmjNPpJYhGDgaEqeeA4HA" target="_blank">
+                <img src="imagenes/thegref.png">
+            </a>
+            <strong>@TheGrefg</strong>
+        </div>
+    </div>
+</section>
+
+<section id="consejos">
+    <h2>Consejos para Mejorar tus Streams</h2>
+    <ul class="beneficios">
+        <li>Habla aunque no haya espectadores, esto proyecta energía y mejora tu presencia.</li>
+        <li>Horarios fijos permiten que la audiencia se acostumbre y regrese.</li>
+        <li>Miniaturas llamativas y títulos claros atraen más clics.</li>
+        <li>Colabora con otros streamers para intercambiar audiencias.</li>
+    </ul>
+</section>
+
+<section id="video">
+    <h2>Video Motivacional</h2>
+    <div class="media-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CfEOwQnd-OM" allowfullscreen></iframe>
+    </div>
+</section>
+
+<section id="grafico">
+    <h2>Gráfico de Crecimiento</h2>
+    <div class="media-container">
+        <img src="imagenes/crecimiento.png" clas="logo-relieve" width="750">
+    </div>
+</section>
+
+<section id="comunidad">
+    <h2>Logo de la Comunidad</h2>
+    <div class="media-container">
+        <img src="imagenes/Logo.png" class="logo-relieve">
+    </div>
+</section>
+
+<section id="colab">
+    <h2>Requisitos de Colaboración</h2>
+    <ul class="colab-lista">
+        <li>Respeto entre creadores y sus comunidades.</li>
+        <li>No usar bots, seguidores falsos ni trampas.</li>
+        <li>Apoyo real en likes, comentarios y compartidos.</li>
+        <li>Buena actitud y ambiente sano en cada stream.</li>
+    </ul>
+</section>
+
+<footer>
+    © 2025 Zona Gamer - Unidos Crecemos
+</footer>
+
+<script>
+/* Mostrar botón al bajar */
+window.addEventListener("scroll",()=>{
+    document.getElementById("topBtn").style.display =
+    (window.scrollY > 400) ? "block" : "none";
+});
+</script>
+
+</body>
+</html>
