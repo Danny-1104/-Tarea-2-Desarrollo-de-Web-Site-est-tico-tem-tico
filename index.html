@@ -4,191 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zona Gamer - Apoyo a Streamers</title>
-
-<style>
-/* ======== ESTILO GENERAL ========*/
-body{
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: url("imagenes/fondo.png") no-repeat center center fixed;
-    background-size: cover;
-    color: #ffffff;
-    scroll-behavior: smooth;
-    line-height: 1.6;
-}
-
-/* Neon Colors */
-:root{
-    --neon-red: #ff003c;
-    --neon-blue: #00e5ff;
-}
-
-/* ======== BARRA DE NAVEGACIÓN ======== */
-.nav-cyber{
-    position: fixed;
-    top: 0; left: 0; width: 100%;
-    background: rgba(5,5,15,0.85);
-    backdrop-filter: blur(5px);
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    border-bottom: 2px solid var(--neon-blue);
-    z-index: 1000;
-}
-.nav-cyber a{
-    color: var(--neon-blue);
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s;
-}
-.nav-cyber a:hover{
-    text-shadow: 0 0 12px var(--neon-red);
-}
-
-/* ======== ENCABEZADO ======== */
-header{
-    margin-top: 90px;
-    text-align: center;
-    padding: 70px 20px;
-    background: rgba(0,0,0,0.65);
-    font-size: 42px;
-    font-weight: bold;
-    text-shadow: 0 0 15px #000;
-    border-bottom: 3px solid #000;
-}
-
-/* ======== SECCIONES ======== */
-section{
-    padding: 65px 10%;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    background: rgba(0,0,0,0.60);
-    backdrop-filter: blur(4px);
-}
-section p{
-    text-align: justify;
-}
-
-/* ======== TÍTULOS NEÓN PARPADEANTE ======== */
-h2{
-    font-size: 34px;
-    margin-bottom: 20px;
-    color: var(--neon-blue);
-    animation: neonPulse 2s infinite alternate;
-}
-@keyframes neonPulse{
-    from { text-shadow: 0 0 6px var(--neon-blue); }
-    to   { text-shadow: 0 0 18px var(--neon-red); }
-}
-
-/* ======== TARJETAS ======== */
-.destacados-grid{
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.card{
-    background: rgba(255,255,255,0.07);
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    width: 250px;
-    border: 2px solid var(--neon-blue);
-    box-shadow: 0 0 15px var(--neon-blue);
-    transition: 0.3s;
-}
-.card:hover{
-    transform: scale(1.07);
-    box-shadow: 0 0 25px var(--neon-red);
-}
-.card img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* ======== LOGO CON RELIEVE ======== */
-.logo-relieve{
-    width: 300px;
-    filter: drop-shadow(0px 0px 18px var(--neon-blue));
-    border-radius: 14px;
-}
-
-/* ======== LISTAS ======== */
-.beneficios, .colab-lista{
-    background: rgba(255,255,255,0.07);
-    padding: 25px;
-    border-radius: 12px;
-    border-left: 4px solid var(--neon-blue);
-    box-shadow: 0 0 12px rgba(0,229,255,0.6);
-}
-
-/* ======== MEDIOS ======== */
-.media-container{
-    text-align:center;
-}
-.media-container iframe, .media-container img{
-    max-width: 100%;
-    border:2px solid var(--neon-blue);
-    border-radius: 8px;
-    box-shadow: 0 0 18px var(--neon-red);
-}
-
-/* ======== BOTÓN VOLVER ARRIBA ======== */
-#topBtn{
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: var(--neon-blue);
-    color: #000;
-    padding: 12px 16px;
-    border-radius: 50px;
-    font-weight: bold;
-    box-shadow: 0 0 18px var(--neon-blue);
-    cursor: pointer;
-    transition: 0.3s;
-    display:none;
-}
-#topBtn:hover{
-    box-shadow: 0 0 30px var(--neon-red);
-}
-
-/* ======== PIE ======== */
-footer{
-    text-align: center;
-    padding: 25px;
-    color: var(--neon-blue);
-    background: rgba(0,0,0,0.85);
-}
-
-/* ======== FORMULARIO (estilos básicos) ======== */
-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-}
-form label{
-    font-weight: bold;
-    margin-top: 8px;
-}
-form input, form select, form textarea, form button{
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: rgba(0,0,0,0.45);
-    color: #fff;
-}
-form button{
-    cursor: pointer;
-    border: 2px solid var(--neon-blue);
-    background: linear-gradient(90deg, rgba(0,229,255,0.12), rgba(255,0,60,0.06));
-    margin-top: 12px;
-}
-</style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
@@ -361,12 +177,13 @@ form button{
     © 2025 Zona Gamer - Unidos Crecemos
 </footer>
 
-<script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
 /* Mostrar botón al bajar */
 window.addEventListener("scroll", () => {
     document.getElementById("topBtn").style.display =
         (window.scrollY > 400) ? "block" : "none";
 });
+
 </script>
 
 </body>
